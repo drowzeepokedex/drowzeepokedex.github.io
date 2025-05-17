@@ -1,204 +1,181 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Drowzee's Pokédex</title> 
-    <link rel="icon" href="https://archives.bulbagarden.net/media/upload/thumb/e/e4/0096Drowzee.png/375px-0096Drowzee.png" type="image/x-icon"> 
-    <style>
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f5f5f5;
-        margin: 0;
-        padding: 0;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drowzee's Pokédex - Home</title>
+  <link rel="icon" href="https://archives.bulbagarden.net/media/upload/thumb/e/e4/0096Drowzee.png/375px-0096Drowzee.png" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      header {
-        background-color: #ef5350;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-      }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(45deg, #f3f3f3, #d6e0f0);
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
 
-      .search-bar {
-        text-align: center;
-        margin: 1rem;
-      }
+    header {
+      background-color: #ef5350;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
 
-      input[type="text"] {
-        padding: 0.5rem;
-        width: 300px;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
 
-      .pokedex {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-        padding: 1rem;
-      }
+    .pokemon-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-      .pokemon-card {
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        padding: 1rem;
-        text-align: center;
-      }
+    .pokemon-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
 
-      .pokemon-card img {
-        width: 100px;
-        height: 100px;
-      }
+    .pokemon-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
 
-      .pokemon-type {
-        margin-top: 0.5rem;
-        font-size: 0.9rem;
-        color: #666;
-      }
+    .pokemon-img img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-    </style>
-  </head>
-  <body>
+    .pokemon-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
 
-    <header>
-      <h1>Drowzee's Pokédex</h1>
-    </header>
+    .pokemon-name a {
+      color: #ef5350;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-    <div class="search-bar">
-      <input type="text" placeholder="Search Pokémon...">
+    .pokemon-name a:hover {
+      color: #4CAF50;
+    }
+
+    .pokemon-details {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .back-link a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Drowzee's Pokédex</h1>
+  </header>
+
+  <div class="container">
+    <div class="pokemon-list">
+      <!-- Pokémon Cards -->
+      <div class="pokemon-card">
+        <div class="pokemon-img">
+          <img src="https://img.pokemondb.net/sprites/x-y/normal/bulbasaur.png" alt="Bulbasaur">
+        </div>
+        <p class="pokemon-name"><a href="bulbasaur.html">Bulbasaur</a></p>
+        <div class="pokemon-details">
+          <p>Type: Grass/Poison</p>
+          <p>Height: 0.7m</p>
+          <p>Weight: 6.9kg</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card">
+        <div class="pokemon-img">
+          <img src="https://img.pokemondb.net/sprites/x-y/normal/ivysaur.png" alt="Ivysaur">
+        </div>
+        <p class="pokemon-name"><a href="ivysaur.html">Ivysaur</a></p>
+        <div class="pokemon-details">
+          <p>Type: Grass/Poison</p>
+          <p>Height: 1.0m</p>
+          <p>Weight: 13.0kg</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card">
+        <div class="pokemon-img">
+          <img src="https://img.pokemondb.net/sprites/x-y/normal/charmander.png" alt="Charmander">
+        </div>
+        <p class="pokemon-name"><a href="charmander.html">Charmander</a></p>
+        <div class="pokemon-details">
+          <p>Type: Fire</p>
+          <p>Height: 0.6m</p>
+          <p>Weight: 8.5kg</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card">
+        <div class="pokemon-img">
+          <img src="https://img.pokemondb.net/sprites/x-y/normal/charmeleon.png" alt="Charmeleon">
+        </div>
+        <p class="pokemon-name"><a href="charmeleon.html">Charmeleon</a></p>
+        <div class="pokemon-details">
+          <p>Type: Fire</p>
+          <p>Height: 1.1m</p>
+          <p>Weight: 19.0kg</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card">
+        <div class="pokemon-img">
+          <img src="https://img.pokemondb.net/sprites/x-y/normal/charizard.png" alt="Charizard">
+        </div>
+        <p class="pokemon-name"><a href="charizard.html">Charizard</a></p>
+        <div class="pokemon-details">
+          <p>Type: Fire/Flying</p>
+          <p>Height: 1.7m</p>
+          <p>Weight: 90.5kg</p>
+        </div>
+      </div>
     </div>
 
-    <div class="pokedex">
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/bulbasaur">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/bulbasaur.png" alt="Bulbasaur">
-  </a>
-  <a href="https://drowzeepokedex.github.io/bulbasaur"><h3>Bulbasaur</h3></a>
-  <h3>#0001</h3>
-  <div class="pokemon-type">Grass / Poison</div>
-</div>
+    <div class="back-link">
+      <a href="index.html">← Back to Pokédex</a>
+    </div>
+  </div>
 
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/ivysaur">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/ivysaur.png" alt="Ivysaur">
-  </a>
-  <a href="https://drowzeepokedex.github.io/ivysaur"><h3>Ivysaur</h3></a>
-  <h3>#0002</h3>
-  <div class="pokemon-type">Grass / Poison</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/venusaur">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/venusaur-f.png" alt="Venusaur">
-  </a>
-  <a href="https://drowzeepokedex.github.io/venusaur"><h3>Venusaur</h3></a>
-  <h3>#0003</h3>
-  <div class="pokemon-type">Grass / Poison</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/charmander">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/charmander.png" alt="Charmander">
-  </a>
-  <a href="https://drowzeepokedex.github.io/charmander"><h3>Charmander</h3></a>
-  <h3>#0004</h3>
-  <div class="pokemon-type">Fire</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/charmeleon">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/charmeleon.png" alt="Charmeleon">
-  </a>
-  <a href="https://drowzeepokedex.github.io/charmeleon"><h3>Charmeleon</h3></a>
-  <h3>#0005</h3>
-  <div class="pokemon-type">Fire</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/charizard">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/charizard.png" alt="Charizard">
-  </a>
-  <a href="https://drowzeepokedex.github.io/charizard"><h3>Charizard</h3></a>
-  <h3>#0006</h3>
-  <div class="pokemon-type">Fire / Flying</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/squirtle">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/squirtle.png" alt="Squirtle">
-  </a>
-  <a href="https://drowzeepokedex.github.io/squirtle"><h3>Squirtle</h3></a>
-  <h3>#0007</h3>
-  <div class="pokemon-type">Water</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/wartortle">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/wartortle.png" alt="Wartortle">
-  </a>
-  <a href="https://drowzeepokedex.github.io/wartortle"><h3>Wartortle</h3></a>
-  <h3>#0008</h3>
-  <div class="pokemon-type">Water</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/blastoise">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/blastoise.png" alt="Blastoise">
-  </a>
-  <a href="https://drowzeepokedex.github.io/blastoise"><h3>Blastoise</h3></a>
-  <h3>#0009</h3>
-  <div class="pokemon-type">Water</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/caterpie">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/caterpie.png" alt="Caterpie">
-  </a>
-  <a href="https://drowzeepokedex.github.io/caterpie"><h3>Caterpie</h3></a>
-  <h3>#0010</h3>
-  <div class="pokemon-type">Bug</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/metapod">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/metapod.png" alt="Metapod">
-  </a>
-  <a href="https://drowzeepokedex.github.io/metapod"><h3>Metapod</h3></a>
-  <h3>#0011</h3>
-  <div class="pokemon-type">Bug</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/butterfree">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/butterfree-f.png" alt="Butterfree">
-  </a>
-  <a href="https://drowzeepokedex.github.io/butterfree"><h3>Butterfree</h3></a>
-  <h3>#0012</h3>
-  <div class="pokemon-type">Bug / Flying</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/butterfree">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/weedle.png" alt="Weedle">
-  </a>
-  <a href="https://drowzeepokedex.github.io/butterfree"><h3>Weedle</h3></a>
-  <h3>#0013</h3>
-  <div class="pokemon-type">Bug</div>
-</div>
-
-<div class="pokemon-card">
-  <a href="https://drowzeepokedex.github.io/kakuna">
-    <img src="https://img.pokemondb.net/sprites/x-y/normal/kakuna.png" alt="kakuna">
-  </a>
-  <a href="https://drowzeepokedex.github.io/kakuna"><h3>Kakuna</h3></a>
-  <h3>#0014</h3>
-  <div class="pokemon-type">Bug</div>
-</div>
-
+</body>
+</html>
