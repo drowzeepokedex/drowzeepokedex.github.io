@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drowzee's pokedex - bulbasaur</title>
-  <link rel="icon" href="https://archives.bulbagarden.net/media/upload/thumb/e/e4/0096Drowzee.png/375px-0096Drowzee.png" type="image/x-icon"> 
-  <link rel="stylesheet" href="style.css"> <!-- optional for shared styles -->
+  <title>Drowzee's Pokédex - Bulbasaur</title>
+  <link rel="icon" href="https://archives.bulbagarden.net/media/upload/thumb/e/e4/0096Drowzee.png/375px-0096Drowzee.png" type="image/x-icon">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f3f3f3;
+      color: #333;
+      padding: 20px;
     }
 
     header {
@@ -30,23 +35,21 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    .pokemon-img {
-      text-align: center;
-    }
-
     .pokemon-img img {
-      width: 150px;
+      width: 200px;
+      display: block;
+      margin: 0 auto;
     }
 
     h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
+      text-align: center;
+      margin-top: 1rem;
     }
 
     table {
       width: 100%;
+      margin-top: 20px;
       border-collapse: collapse;
-      margin-top: 1rem;
     }
 
     table, th, td {
@@ -54,14 +57,13 @@
     }
 
     th, td {
-      padding: 8px;
+      padding: 10px;
       text-align: left;
     }
 
     .back-link {
-      display: block;
-      margin-top: 1rem;
       text-align: center;
+      margin-top: 20px;
     }
 
     .back-link a {
@@ -110,9 +112,7 @@
       </tr>
       <tr>
         <th>Evolution</th>
-        <td>
-          Bulbasaur → <a href="ivysaur.html">Ivysaur</a> → <a href="venusaur.html">Venusaur</a>
-        </td>
+        <td>Bulbasaur → Ivysaur → Venusaur</td>
       </tr>
     </table>
 
